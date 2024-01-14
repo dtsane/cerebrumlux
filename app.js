@@ -15,10 +15,11 @@ app.post('/chat', async (req, res) => {
     const userMessage = req.body.message;
 
     try {
-        const response = await fetch(APIKEY.CHATGPT_URL, {
+        console.log(APIKEY.OPEN_AI_URL);
+        const response = await fetch(APIKEY.OPEN_AI_URL, {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${APIKEY.CHATGPT_KEY}`,
+                'Authorization': `Bearer ${APIKEY.OPEN_AI_KEY}`,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
@@ -40,6 +41,6 @@ app.post('/chat', async (req, res) => {
 
 // Start server
 // Démarrage du serveur
-app.listen(process.env.PORT);
+app.listen(3000);
 console.info(`Serveurs démarré:`);
-console.info(`http://localhost:${process.env.PORT}`);
+console.info(`http://localhost:3000`);
