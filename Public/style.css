@@ -7548,6 +7548,7 @@ footer .footer-bottom p a {
 .dot {
   height: 8px;
   width: 8px;
+  margin-bottom: 10px;
   margin: 0 4px;
   background-color: #333;
   border-radius: 50%;
@@ -7567,6 +7568,103 @@ footer .footer-bottom p a {
 .chat-messages {
   /* Existing styles... */
   height: calc(100% - 100px); /* Adjust height to account for header and input area */
+}
+
+.meeting-button {
+  margin-top: 10px;
+  display: block;
+  padding: 5px 10px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.meeting-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+.message-info {
+  font-size: 0.8em; /* Smaller text size */
+  color: #666; /* Dimmed text color */
+  margin-top: 5px; /* Space above the info text */
+  text-align: right; /* Align to the right */
+}
+/* Modal styles */
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto; /* Adjust top margin */
+  padding: 20px;
+  border-radius: 8px;
+  border: none;
+  width: 40%; /* Adjust width */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif; /* Professional font */
+}
+
+.modal-header {
+  background-color: #007bff; /* Blue header */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 1.2em;
+}
+.modal h2{
+  color: white;
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.modal-body {
+  padding: 20px;
+  color: #333; /* Dark text for readability */
+}
+
+.modal-body input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px; /* Spacing between fields */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.confirm-button {
+  background-color: #28a745; /* Green background for confirm button */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.confirm-button:hover {
+  background-color: #218838; /* Darker green on hover */
 }
 
 @keyframes typing {

@@ -23,7 +23,8 @@ app.post('/chat', async (req, res) => {
             },
             body: JSON.stringify({
                 model: "gpt-3.5-turbo",
-                messages:[{ role: "system", content: "Technical Support for a company that make website, mobile application and videos for clients" }, { role: "user", content: userMessage}],
+                messages:[{ role: "system", content: "Technical Support for company named Cerebrum Lux that make website, mobile application and videos for clients. Your goal is to convert the user into a potential client and to book a meeting with them. Have small but concise answers" }, 
+                { role: "user", content: userMessage}],
                 max_tokens: 100,      // Maximum length of the response
             })
         });

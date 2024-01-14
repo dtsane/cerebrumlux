@@ -16,9 +16,13 @@
   },
   "homepage": "https://github.com/dtsane/cerebrumlux#readme",
   "dependencies": {
+    "build": "^0.1.4",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "node-fetch": "^3.3.2",
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.2",
+    "openai": "^4.24.7",
+    "openai-nodejs": "^1.1.0",
+    "os": "^0.1.2"
   }
 }
