@@ -41,6 +41,6 @@ app.post('/chat', async (req, res) => {
 
 // Start server
 // Démarrage du serveur
-app.listen(3000);
+app.listen(APIKEY.PORT);
 console.info(`Serveurs démarré:`);
 console.info(`http://localhost:3000`);
