@@ -43,6 +43,38 @@ function sendMessageToServer(message) {
     });
 }
 
+function sendEmailToServer(name,email,date,time) {
+
+    const data = {
+        name: name,
+        email:email,
+        date:date,
+        time:time,
+    }
+    fetch('/send', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(async data => {
+        await delay(2000);
+        hideTypingIndicator();
+        // Display ChatGPT's response
+        if (data.reply) {
+            displayMessage(data.reply, false);  // false indicates it's not a user message
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Optionally display an error message in the chatbox
+        displayMessage('Error getting response', false);
+        hideTypingIndicator();
+    });
+}
+
 function createMeetingButton() {
     var button = document.createElement('button');
     var chatBox = document.querySelector('.chat-box');
@@ -97,11 +129,21 @@ function showModal() {
     var modal = document.getElementById("scheduleModal");
     modal.style.display = "block";
 
-    // Initialize the date and time picker
-    flatpickr('#datetime-picker', {
-        enableTime: true,
-        dateFormat: "Y-m-d H:i",
+    // Initialize the date picker
+    flatpickr('#date-picker', {
+        altFormat: "F j, Y",
+        dateFormat: "Y-m-d",
         minDate: "today",
+        maxDate: new Date().fp_incr(14) 
+    });
+
+    // Initialize the date and time picker
+    flatpickr('#time-picker', {
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i",
+        minTime: "9:00",
+        maxTime: "19:30",
     });
 }
 
@@ -123,11 +165,13 @@ window.onclick = function(event) {
 document.getElementById('confirmButton').addEventListener('submit', function(event) {
    
     event.preventDefault(); // Prevent the default form submit action
-    var name = document.getElementById('name');
-    var email = document.getElementById('email');
-    var selectedDateTime = document.getElementById('datetime-picker');
+    let name = document.getElementById('chat-name');
+    let email = document.getElementById('chat-email');
+    let selectedDate = document.getElementById('date-picker');
+    let selectedTime = document.getElementById('time-picker');
     
     // You can add logic here to send this data to the server or process it further
+    sendEmailToServer(name.value.trim(),email.value.trim(),selectedDate.value.trim(),selectedTime.value.trim());
     displayMessage("A confirmation email has been sent to: " + email.value.trim(), false);
     toggleChatBox();
     
