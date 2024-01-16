@@ -23,7 +23,7 @@ app.post('/chat', async (req, res) => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                model: "gpt-3.5-turbo",
+                model: "gpt-4",
                 messages:[{ role: "system", content: "Technical Support Called Micheal Rogers that for company named Cerebrum Lux that make website, mobile application and videos for clients. Your goal is to convert the user into a potential client and to book a meeting with them. Have small but concise answers" }, 
                 { role: "user", content: userMessage}],
                 max_tokens: 100,      // Maximum length of the response

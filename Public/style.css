@@ -8479,8 +8479,8 @@ margin-top: 50px;
 }
 
 .profile-icon, .fas.fa-user-circle {
-  width: 20px; /* Adjust as needed */
-  height: 20px; /* Adjust as needed */
+  width: 22px; /* Adjust as needed */
+  height: 22px; /* Adjust as needed */
   margin-right: 5px;
   vertical-align: middle;
 }
@@ -8498,8 +8498,8 @@ margin-top: 50px;
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
   .profile-icon {
-      width: 15px; /* Smaller size on smaller screens */
-      height: 15px;
+      width: 20px; /* Smaller size on smaller screens */
+      height: 20px;
   }
 }
 
@@ -8547,35 +8547,35 @@ margin-top: 50px;
 /* Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) {
   .banner-area.banner-style-nine .content {
-    padding-top: 120px !important;
-    padding-bottom: 170px !important;
-}
+      padding-top: 120px !important;
+      padding-bottom: 170px !important;
+  }
 
-.banner-area.banner-style-nine .content h2 {
-    font-size: 36px;
-}
+  .banner-area.banner-style-nine .content h2 {
+      font-size: 36px;
+  }
 
-.about-style-nine .thumb {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 30px;
-}
+  .about-style-nine .thumb {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 30px;
+  }
 
-.about-style-nine .thumb h4 {
-    display: none;
-}
+  .about-style-nine .thumb h4 {
+      display: none;
+  }
 
-.about-style-nine .info {
-    padding: 0;
-}
+  .about-style-nine .info {
+      padding: 0;
+  }
 
-.about-style-nine .info .contact p {
-    display: none;
-}
+  .about-style-nine .info .contact p {
+      display: none;
+  }
 
-.process-style-two:nth-child(2n) {
-    margin-top: 0;
-}
+  .process-style-two:nth-child(2n) {
+      margin-top: 0;
+  }
 
 
 }

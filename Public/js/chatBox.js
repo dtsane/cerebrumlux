@@ -70,7 +70,7 @@ function sendEmailToServer(name,email,date,time) {
     .catch(error => {
         console.error('Error:', error);
         // Optionally display an error message in the chatbox
-        displayMessage('Error getting response', false);
+        //displayMessage('Error getting response', false);
         hideTypingIndicator();
     });
 }
