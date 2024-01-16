@@ -93,7 +93,19 @@ function displayMessage(message, isUserMessage) {
     
     var messageDiv = document.createElement('div');
     messageDiv.classList.add('message');
-    messageDiv.textContent = message;
+
+    // Create an icon or image element
+    if (!isUserMessage) {
+        var img = document.createElement('img');
+        img.src = 'assets/img/chat-profile.jpg'; // Path to your server image
+        img.className = 'profile-icon';
+        messageDiv.appendChild(img);
+    } 
+
+    // Add message text
+    var textSpan = document.createElement('span');
+    textSpan.textContent = message;
+    messageDiv.appendChild(textSpan);
 
     if (isUserMessage) {
         messageDiv.classList.add('user-message');
@@ -106,9 +118,10 @@ function displayMessage(message, isUserMessage) {
             messageDiv.appendChild(button);
         }
 
+
         // Append additional info for server messages
         var infoDiv = document.createElement('div');
-        infoDiv.textContent = "Cerebrum Lux AI - " + getCurrentTime();
+        infoDiv.textContent = "Micheal Rogers - " + getCurrentTime();
         infoDiv.classList.add('message-info');
         messageDiv.appendChild(infoDiv);
 

@@ -7449,9 +7449,12 @@ footer .footer-bottom p a {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #007bff;
+  background-color: #104cba;
   color: white;
-  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 2px 5px grey;
@@ -7558,7 +7561,7 @@ footer .footer-bottom p a {
 
 
 .chat-header {
-  color: #007bff; /* Header text color */
+  color: #104cba; /* Header text color */
   text-align: center;
   padding: 10px;
   font-size: 1.2em; /* Adjust size as needed */
@@ -7617,7 +7620,7 @@ footer .footer-bottom p a {
 }
 
 .modal-header {
-  background-color: #007bff; /* Blue header */
+  background-color: #104cba; /* Blue header */
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   font-size: 1.2em;
@@ -8473,6 +8476,39 @@ margin-top: 50px;
 .process-style-two p {
   margin-bottom: 0;
   color: #666666;
+}
+
+.profile-icon, .fas.fa-user-circle {
+  width: 20px; /* Adjust as needed */
+  height: 20px; /* Adjust as needed */
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.profile-icon {
+  width: 30px; /* Default size */
+  height: 30px; /* Default size */
+  border-radius: 50%; /* Circular shape */
+  border: 2px solid #007bff; /* Blue border */
+  vertical-align: middle;
+  margin-right: 5px;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .profile-icon {
+      width: 15px; /* Smaller size on smaller screens */
+      height: 15px;
+  }
+}
+
+/* Responsive adjustments for larger screens */
+@media screen and (min-width: 1200px) {
+  .profile-icon {
+      width: 33px; /* Larger size on larger screens */
+      height: 33px;
+  }
 }
 
 /* Tablet Layout: 768px.*/
